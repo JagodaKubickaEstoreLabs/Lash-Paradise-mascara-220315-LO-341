@@ -51,7 +51,6 @@ body {
   }
  
   .es-kv {
-    border:1px solid red;
     position: relative;
     padding-top: 24px;
     &__disclaimer{
@@ -76,6 +75,7 @@ body {
     }
     &__stars{
       display: none;
+      visibility: hidden;
       position: absolute;
       top: 50px;
       left:50px;
@@ -680,9 +680,9 @@ body {
 
   @media screen and (min-width: 768px) {
     .es-kv {
-      border:1px solid green;
       &__stars{
         display: flex;
+        visibility: visible;
       }
       &__banner {
         position: relative;

@@ -28,7 +28,6 @@ body {
   color: #1d1d1b;
 }
 #es-loreal.es-loreal .es-kv {
-  border: 1px solid red;
   position: relative;
   padding-top: 24px;
 }
@@ -55,6 +54,7 @@ body {
 }
 #es-loreal.es-loreal .es-kv__stars {
   display: none;
+  visibility: hidden;
   position: absolute;
   top: 50px;
   left: 50px;
@@ -756,11 +756,9 @@ body {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  #es-loreal.es-loreal .es-kv {
-    border: 1px solid green;
-  }
   #es-loreal.es-loreal .es-kv__stars {
     display: flex;
+    visibility: visible;
   }
   #es-loreal.es-loreal .es-kv__banner {
     position: relative;
