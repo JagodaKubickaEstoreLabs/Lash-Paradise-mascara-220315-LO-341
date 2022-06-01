@@ -51,8 +51,15 @@ body {
   }
  
   .es-kv {
+    border:1px solid red;
     position: relative;
     padding-top: 24px;
+    &__disclaimer{
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      font-size: 12px;
+    }
     &__logo {
       margin: 24px 0;
       margin-top: 0;
@@ -67,6 +74,24 @@ body {
       padding-top: 20px;
       overflow: hidden;
     }
+    &__stars{
+      display: none;
+      position: absolute;
+      top: 50px;
+      left:50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p{
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 0;
+      }
+      span{
+        font-size: 20px;
+      }
+    }
     &__brand{
       width: 100%;
       display: flex;
@@ -75,6 +100,7 @@ body {
     }
     &__brand-name{
       max-width: 200px;
+      margin-bottom: 20px;
     }
     &__fancy {
       @include text;
@@ -105,12 +131,15 @@ body {
       position: relative;
       padding: 0 16px;
       img{
-        max-width: 300px;
-        margin-left: 280px;
+        max-width: 240px;
+        margin: 0 auto;
       }
     }
     &__img {
       @include img;
+    }
+    &__lines{
+      display: none;
     }
     &__tik {
       padding: 24px;
@@ -121,6 +150,10 @@ body {
     &__content {
       padding: 0 16px;
       opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       &--1 {
         animation: slideright 0.6s ease forwards;
         animation-delay: 0.6s;
@@ -128,6 +161,12 @@ body {
       &--2 {
         animation: slideleft 0.6s ease forwards;
         animation-delay: 0.6s;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+      img{
+        display: none;
       }
     }
     &__disc {
@@ -217,7 +256,7 @@ body {
       &--banner {
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 39px;
+        font-size: 59px;
         flex: 5;
         text-align: left;
       }
@@ -236,6 +275,9 @@ body {
     }
     &__packshot {
       flex: 3;
+      img{
+        max-width: 300px;
+      }
     }
     &__banner {
       padding: 32px 16px;
@@ -243,9 +285,15 @@ body {
       flex-flow: column;
       align-items: center;
       display: none;
+      width: 100%;
     }
     &__line {
       display: none;
+    }
+    &__brand{
+      img{
+        max-width: 360px;
+      }
     }
   }
  
@@ -307,12 +355,14 @@ body {
     }
     &__title{
       text-transform: uppercase;
+      text-align: center;
     }
     &__images{
       // padding: 32px;
       display: flex;
       flex-wrap: wrap;
       width: 50%;
+      justify-content: center;
     }
     &__img{
       display: flex;
@@ -329,7 +379,7 @@ body {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      margin-right: 5px;
+      margin-bottom: 5px;
       position: relative;
       color: #fff;
       p{
@@ -378,6 +428,7 @@ body {
       font-weight: 300;
       text-transform: uppercase;
       font-size: 32px;
+      text-align: center;
       align-self: center;
       letter-spacing: -1px;
       line-height: 1.1;
@@ -437,11 +488,13 @@ body {
       display: flex;
       flex-direction: column;
       max-width: 200px;
-      margin:10px;
+      margin-top:15px;
+      margin-right: 0;
     }
     &__img{
       width: 100%;
       height: auto;
+      position: relative;
     }
     &__text{
       text-align: center;
@@ -458,7 +511,8 @@ body {
     &__vertical{
       text-transform: uppercase;
       font-size: 24px;
-      transform: rotate(-90deg)
+      transform: rotate(-90deg);
+      display: none;
     }
   }
   .es-slider {
@@ -600,7 +654,10 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      
+      height: 100%;
+      img{
+        width: 100%;
+      }
       &--packshots{
         margin-left: 0;
         margin-bottom: 0;
@@ -616,12 +673,17 @@ body {
     &__title{
      font-size: 28px;
      text-transform: uppercase;
+     text-align: center;
    }
   }
 
 
   @media screen and (min-width: 768px) {
     .es-kv {
+      border:1px solid green;
+      &__stars{
+        display: flex;
+      }
       &__banner {
         position: relative;
       }
@@ -629,17 +691,29 @@ body {
         position: absolute;
         z-index: 3;
         &--1 {
-          top: 167px;
-          right: 60%;
+          top: 217px;
+          right: 58%;
           min-width: 332px;
         }
         &--2 {
-          top: 304px;
-          left: 68%;
+          top: 144px;
+          left: 65%;
+        }
+        img{
+          display: block;
+        }
+      }
+      &__packshot{
+        img{
+          max-width: 300px;
+          margin-left: 290px;
         }
       }
       &__fancy {
         margin-bottom: 10px;
+      }
+      &__lines{
+        display: block;
       }
       &__line {
         margin-bottom: 24px;
@@ -648,19 +722,25 @@ body {
         }
       }
       &__line-2 {
+        position: absolute;
+        left: -90px;
+        width: fit-content;
         img {
-          margin-left: -48px;
+          margin-left: 48px;
         }
+      }
+      &__line-3{
+        position: absolute;
+        left: -55px;
+        top:215px;
+        width: fit-content;
       }
       &__badge {
         margin-top: 40px;
         display: flex;
-          flex-direction: row;
-          align-content: space-around;
-        img {
-          
-          margin-right: 5px;
-        }
+        flex-direction: row;
+        align-content: space-around;
+        position: relative;
       }
       &__text,
       &__title {
@@ -720,6 +800,17 @@ body {
       &__img{
         width: 50%;
       }
+      &__before{
+        margin: 5px;
+      }
+    }
+    .es-eyelashes{
+      &__single{
+        margin-right: 5px;
+      }
+      &__vertical{
+        display: block;
+      }
     }
     .es-slider {
       margin-bottom: 32px;
@@ -756,7 +847,7 @@ body {
       &__packshot{
         img{
           height: 500px;
-          min-width: 450px;
+          min-width: 200px;
         }
       }
       &__img {
@@ -832,7 +923,7 @@ body {
       &__title{
        font-size: 28px;
        text-transform: uppercase;
-       
+       text-align: start; 
      }
     }
 
