@@ -55,7 +55,7 @@ body {
     padding-top: 24px;
     &__disclaimer{
       position: absolute;
-      bottom: 0;
+      bottom: -30px;
       right: 10px;
       font-size: 12px;
     }
@@ -701,6 +701,12 @@ body {
       &__stars{
         display: flex;
         visibility: visible;
+      }
+      &__disclaimer{
+        position: absolute;
+      bottom: 0;
+      right: 10px;
+      font-size: 12px;
       }
       &__banner {
         position: relative;

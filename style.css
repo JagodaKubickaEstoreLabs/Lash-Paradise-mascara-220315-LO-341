@@ -33,7 +33,7 @@ body {
 }
 #es-loreal.es-loreal .es-kv__disclaimer {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   right: 10px;
   font-size: 12px;
 }
@@ -777,6 +777,12 @@ body {
   #es-loreal.es-loreal .es-kv__stars {
     display: flex;
     visibility: visible;
+  }
+  #es-loreal.es-loreal .es-kv__disclaimer {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 12px;
   }
   #es-loreal.es-loreal .es-kv__banner {
     position: relative;
