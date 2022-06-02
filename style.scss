@@ -491,6 +491,7 @@ body {
       max-width: 200px;
       margin-top:15px;
       margin-right: 0;
+      position: relative;
     }
     &__img{
       width: 100%;
@@ -501,6 +502,22 @@ body {
       text-align: center;
       text-transform: uppercase;
       font-weight: 600;
+    }
+    &__before{
+      display: flex;
+      position: absolute;
+      color: #fff;
+      font-weight: bolder;
+      top:180px;
+      left:10px;
+    }
+    &__after{
+      display: flex;
+      position: absolute;
+      color: #fff;
+      font-weight: bolder;
+      bottom: -5px;
+      left: 10px;
     }
     &__vertical-text{
       display: flex;
@@ -811,6 +828,12 @@ body {
       }
       &__vertical{
         display: block;
+      }
+      &__before{
+        display:none;
+      }
+      &__after{
+        display: none;
       }
     }
     .es-slider {

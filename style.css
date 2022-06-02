@@ -544,6 +544,7 @@ body {
   max-width: 200px;
   margin-top: 15px;
   margin-right: 0;
+  position: relative;
 }
 #es-loreal.es-loreal .es-eyelashes__img {
   width: 100%;
@@ -554,6 +555,22 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
+}
+#es-loreal.es-loreal .es-eyelashes__before {
+  display: flex;
+  position: absolute;
+  color: #fff;
+  font-weight: bolder;
+  top: 180px;
+  left: 10px;
+}
+#es-loreal.es-loreal .es-eyelashes__after {
+  display: flex;
+  position: absolute;
+  color: #fff;
+  font-weight: bolder;
+  bottom: -5px;
+  left: 10px;
 }
 #es-loreal.es-loreal .es-eyelashes__vertical-text {
   display: flex;
@@ -882,6 +899,12 @@ body {
   }
   #es-loreal.es-loreal .es-eyelashes__vertical {
     display: block;
+  }
+  #es-loreal.es-loreal .es-eyelashes__before {
+    display: none;
+  }
+  #es-loreal.es-loreal .es-eyelashes__after {
+    display: none;
   }
   #es-loreal.es-loreal .es-slider {
     margin-bottom: 32px;
