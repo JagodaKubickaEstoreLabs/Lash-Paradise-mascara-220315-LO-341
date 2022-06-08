@@ -30,7 +30,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  max-width: 998px;
+  max-width: 930px;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -208,7 +208,7 @@ body {
       gap: 48px 0;
     }
     &__single {
-      width: 332px;
+      width: 280px;
       &:hover {
         .es-benefits__img--bg {
           transform: scale(1.1);
@@ -666,7 +666,7 @@ body {
   }
   .es-routine{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 32px;
     &__img{
       display: flex;
@@ -721,7 +721,7 @@ body {
         }
         &--2 {
           top: 144px;
-          left: 65%;
+          left: 68%;
         }
         img{
           display: block;
@@ -747,7 +747,7 @@ body {
       }
       &__line-2 {
         position: absolute;
-        left: -90px;
+        left: -85px;
         width: fit-content;
         img {
           margin-left: 48px;
@@ -755,7 +755,7 @@ body {
       }
       &__line-3{
         position: absolute;
-        left: -55px;
+        left: -50px;
         top:215px;
         width: fit-content;
       }
@@ -862,7 +862,7 @@ body {
     }
   }
 
-  @media screen and (min-width: 998px) {
+  @media screen and (min-width: 930px) {
     .es-benefits {
       &__banner {
         display: flex;
@@ -882,6 +882,9 @@ body {
         }
       }
       &__img {
+        &--bg{
+          width: 200px;
+        }
         &--line-1 {
           position: relative;
           left: 56px;
@@ -931,7 +934,7 @@ body {
     }
     .es-routine{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       padding: 32px;
       &__img{
         display: flex;
